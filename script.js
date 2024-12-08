@@ -3,7 +3,7 @@ const schedules = {
     group1: '',
     group2: '',
     group3: '',
-    group4: '', // Добавьте пустые строки для новых групп
+    group4: '', 
     group5: '',
     group6: '',
     group7: '',
