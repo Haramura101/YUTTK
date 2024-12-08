@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: '' });
 
 let schedules = {};
 
