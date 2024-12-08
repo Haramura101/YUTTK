@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Расписание студентов</title>
+</head>
+<body>
+    <div id="authSection">
+        <h1>Авторизация</h1>
+        <select id="userType" onchange="togglePasswordInput()">
+            <option value="student">Студент</option>
+            <option value="admin">Администратор</option>
+        </select>
+        <input type="password" id="adminPassword" placeholder="Пароль администратора" style="display: none;">
+        <button onclick="authorize()">Войти</button>
+    </div>
+
+    <div id="adminSection" style="display: none;">
+        <h2>Администратор</h2>
+        <select id="groupSelectAdmin">
+            <option value="group1">11Д</option>
+            <option value="group2">12П</option>
+            <option value="group3">13Ф</option>
+            <option value="group4">14К</option>
+            <option value="group5">15Т</option>
+            <option value="group6">21Д</option>
+            <option value="group7">22П</option>
+            <option value="group8">23Ф</option>
+            <option value="group9">24К</option>
+            <option value="group10">25Т</option>
+            <option value="group11">31Д</option>
+            <option value="group12">32П</option>
+            <option value="group13">33П</option>
+            <option value="group14">34К</option>
+            <option value="group15">35Т</option>
+            <option value="group16">41Д</option>
+            <option value="group17">42П</option>
+            <option value="group18">43Ф</option>
+            <option value="group20">44К</option>
+            <option value="group21">45Т</option>
+            <option value="group22">54К</option>
+        </select>
+        <input type="file" id="scheduleImageInput" accept="image/*">
+        <button onclick="updateSchedule()">Обновить расписание</button>
+    </div>
+
+    <div id="studentSection" style="display: none;">
+        <h2>Студенты</h2>
+        <select id="groupSelect">
+            <option value="group1">11Д</option>
+            <option value="group2">12П</option>
+            <option value="group3">13Ф</option>
+            <option value="group4">14К</option>
+            <option value="group5">15Т</option>
+            <option value="group6">21Д</option>
+            <option value="group7">22П</option>
+            <option value="group8">23Ф</option>
+            <option value="group9">24К</option>
+            <option value="group10">25Т</option>
+            <option value="group11">31Д</option>
+            <option value="group12">32П</option>
+            <option value="group13">33П</option>
+            <option value="group14">34К</option>
+            <option value="group15">35Т</option>
+            <option value="group16">41Д</option>
+            <option value="group17">42П</option>
+            <option value="group18">43Ф</option>
+            <option value="group20">44К</option>
+            <option value="group21">45Т</option>
+            <option value="group22">54К</option>
+        </select>
+        <button onclick="showSchedule()">Показать расписание</button>
+        <div id="scheduleContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
