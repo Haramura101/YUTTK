@@ -1,14 +1,14 @@
 // Объект для хранения расписаний
 const schedules = {
-    group1: 'group1.png',
-    group2: 'group2.png',
-    group3: 'group3.png',
-    group4: 'group4.png', // Добавьте пустые строки для новых групп
-    group5: 'group5.png',
-    group6: 'group6.png',
-    group7: 'group7.png',
-    group8: 'group8.png',
-    group9: 'group9.png',
+    group1: '',
+    group2: '',
+    group3: '',
+    group4: '', // Добавьте пустые строки для новых групп
+    group5: '',
+    group6: '',
+    group7: '',
+    group8: '',
+    group9: '',
     group10: '',
     group11: '',
     group12: '',
@@ -21,7 +21,6 @@ const schedules = {
     group19: '',
     group20: '',
     group21: '',
-    group22: '',
 };
 
 // Пароль администратора
@@ -61,12 +60,14 @@ function showSchedule() {
 
     // Создание элемента изображения для расписания
     const img = document.createElement('img');
-    img.src = schedules[group]; // Получение URL изображения из объекта
+    const dataUrl = localStorage.getItem(`schedule_${group}`) || schedules[group];
+    console.log(`Data URL for ${group}: ${dataUrl}`); // Debug log
+    img.src = dataUrl; // Получение URL изображения из объекта или localStorage
     img.alt = 'Расписание для ' + group;
     img.style.maxWidth = '100%'; // Ограничение ширины изображения
 
     // Проверка, есть ли расписание для выбранной группы
-    if (schedules[group]) {
+    if (dataUrl) {
         // Добавление изображения в контейнер
         scheduleContainer.appendChild(img);
     } else {
@@ -85,7 +86,9 @@ function updateSchedule() {
         if (file) {
             const reader = new FileReader();
             reader.onload = function(event) {
-                schedules[groupName] = event.target.result; // Обновление расписания с помощью данных файла
+                const dataUrl = event.target.result; // Обновление расписания с помощью данных файла
+                localStorage.setItem(`schedule_${groupName}`, dataUrl);
+                console.log(`Data URL for ${groupName}: ${dataUrl}`); // Debug log
                 alert('Расписание обновлено!');
             };
             reader.readAsDataURL(file); // Чтение файла как URL
