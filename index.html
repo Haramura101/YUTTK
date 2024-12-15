@@ -69,13 +69,13 @@
 
         if (role === "admin") {
             if (password === adminPassword) {
-                alert("Добро пожаловать, администратор!");
+                
                 window.location.href = "admin.html";
             } else {
                 document.getElementById('message').innerText = "Неверный пароль для администратора.";
             }
         } else {
-            alert("Добро пожаловать, студент!");
+            
             window.location.href = "student.html";
         }
     }
