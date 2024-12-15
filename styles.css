@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f4f4f4, #eaeaea);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Закругленные углы */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.schedule {
+    margin-bottom: 20px;
+}
+
+#group-select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.admin-panel {
+    margin-top: 20px;
+}
+
+#edit-schedule {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#edit-form {
+    margin-top: 20px;
+}
+
+#edit-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#edit-form select, #edit-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Закругленные углы */
+}
+
+#edit-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* Стили для мобильных устройств */
+/* Стили для мобильных устройств */
+/* Стили для мобильных устройств */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Уменьшение размера шрифта */
+    }
+    .container {
+        padding: 10px; /* Уменьшение отступов */
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Увеличение размера шрифта */
+    }
+}
+
+/* Стили для ПК */
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Стандартный размер шрифта */
+    }
+}
