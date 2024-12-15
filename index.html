@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
     <title>Авторизация</title>
     <style>
         body {
@@ -69,13 +70,13 @@
 
         if (role === "admin") {
             if (password === adminPassword) {
-                
+                alert("Добро пожаловать, администратор!");
                 window.location.href = "admin.html";
             } else {
                 document.getElementById('message').innerText = "Неверный пароль для администратора.";
             }
         } else {
-            
+            alert("Добро пожаловать, студент!");
             window.location.href = "student.html";
         }
     }
